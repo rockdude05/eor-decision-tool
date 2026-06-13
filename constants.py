@@ -5,15 +5,16 @@
 비용 항목(CO2/OPEX/CAPEX)은 NETL Primer 2010 p.13.
 """
 
-# 저류층 default
+# 저류층 default — 보고서·슬라이드 대표 케이스(깊은 경질유)와 동일하게 맞춤.
+# OOIP 100 (이전 1000은 CAPEX $500M 대비 과대 → IRR 비현실적으로 큼).
 DEFAULT_RESERVOIR = {
-    "api_gravity_deg": 30,
+    "api_gravity_deg": 35,
     "viscosity_cp": 5.0,
-    "depth_ft": 5000,
+    "depth_ft": 8200,
     "permeability_md": 50.0,
     "temperature_f": 150,
     "oil_saturation_pct": 60,
-    "ooip_million_bbl": 1000,
+    "ooip_million_bbl": 100,
 }
 
 # 경제 default — 제출본 § 3-(3) 명시값

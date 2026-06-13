@@ -18,10 +18,10 @@ def test_default_economic_submission_frame():
 
 
 def test_default_reservoir_ranges():
-    """spec § 2.1 저류층 default."""
-    assert DEFAULT_RESERVOIR["api_gravity_deg"] == 30
-    assert DEFAULT_RESERVOIR["depth_ft"] == 5000
-    assert DEFAULT_RESERVOIR["ooip_million_bbl"] == 1000
+    """저류층 default = 보고서 대표 케이스(깊은 경질유, OOIP 100)."""
+    assert DEFAULT_RESERVOIR["api_gravity_deg"] == 35
+    assert DEFAULT_RESERVOIR["depth_ft"] == 8200
+    assert DEFAULT_RESERVOIR["ooip_million_bbl"] == 100
 
 
 def test_recovery_factor_taber_table_8():
