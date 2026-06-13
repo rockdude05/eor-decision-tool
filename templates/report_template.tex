@@ -1,0 +1,55 @@
+% report_template.tex — pandoc + xelatex 보고서 템플릿 (kotex)
+
+\documentclass[10pt]{article}
+\usepackage{kotex}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2.2cm,right=2.2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,tabularx,array,calc}
+% pandoc 3.x longtable 호환 (LTcaptype{none} 카운터 정의)
+\newcounter{none}
+% pandoc 3.x 표 column-width 매크로: p{(\linewidth - 4\tabcolsep) * \real{0.33}}
+\providecommand{\real}[1]{#1}
+\usepackage{xcolor,colortbl}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+% pandoc tightlist 호환 (없으면 Undefined control sequence 발생)
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\setmainhangulfont{AppleSDGothicNeo}[
+  UprightFont = AppleSDGothicNeo-Regular,
+  BoldFont    = AppleSDGothicNeo-Bold,
+  Scale       = 1.0
+]
+
+\titleformat{\section}[hang]{\bfseries\Large}{\thesection.}{6pt}{}
+\titleformat{\subsection}[hang]{\bfseries\normalsize}{\thesubsection.}{4pt}{}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  urlcolor=blue!50!black,
+  pdftitle={EOR 의사결정 보고서},
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small EOR 의사결정 보고서}
+\fancyhead[R]{\small \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+$if(title)$\title{$title$}$endif$
+$if(author)$\author{$author$}$endif$
+$if(date)$\date{$date$}$endif$
+
+\begin{document}
+
+$if(title)$\maketitle$endif$
+
+$body$
+
+\end{document}

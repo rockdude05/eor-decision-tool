@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+results/*.json
+results/backup/*.json
+results/backup/*.pdf
+results/backup/*.md
+!results/.gitkeep
+*.aux
+*.log
+*.out
+.pytest_cache/
