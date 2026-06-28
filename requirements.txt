@@ -1,6 +1,7 @@
-streamlit>=1.32
-numpy>=1.26
-numpy-financial>=1.0
-plotly>=5.20
-pandas>=2.2
-pytest>=8.0
+# 재현성 핀 — Python 3.14 / 113 tests green 기준 (2026-06-28). 갱신 시 pytest tests/ -q 통과 확인.
+streamlit==1.58.0
+numpy==2.5.0
+numpy-financial==1.0.0
+plotly==6.8.0
+pandas==3.0.3
+pytest==9.1.1
